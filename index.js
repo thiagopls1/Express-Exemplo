@@ -1,6 +1,9 @@
 import express from "express"
+import { fileURLToPath } from "url"
+import { dirname } from "path"
 
 const app = express()
+const __dirname = dirname(fileURLToPath(import.meta.url)) // Para utilizar __dirname com o type module
 
 const config = {
     root: 'public'
@@ -15,7 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pagina', (req, res) =>{
-    res.sendFile("index.html", config)
+    res.sendFile(__dirname + '/public/index.html')
     // envia esse arquivo para o localhost:3000/pagina
 })
 

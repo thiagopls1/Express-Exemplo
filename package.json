@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "live-reload": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
