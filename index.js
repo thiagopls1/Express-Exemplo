@@ -2,16 +2,21 @@ import express from "express"
 
 const app = express()
 
-// Mostra para o express utilizar esse diretório para enviar arquivos estáticos
-app.use(express.static('./')) 
+const config = {
+    root: 'public'
+}
+
+app.use(express.static('./public'))
+app.use(express.static('./public/img'))
+// Carrega os arquivos desses diretórios
 
 app.get('/', (req, res) => {
     res.send("Bodia")
 })
 
 app.get('/pagina', (req, res) =>{
-    res.sendFile("index.html")
-    // envia esse arquivo para o localhost:3000/pag-da-gigi
+    res.sendFile("index.html", config)
+    // envia esse arquivo para o localhost:3000/pagina
 })
 
 app.get('/sobre', (req, res) => {
