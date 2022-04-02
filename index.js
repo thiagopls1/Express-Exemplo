@@ -3,11 +3,9 @@ import { fileURLToPath } from "url"
 import { dirname } from "path"
 
 const app = express()
-const __dirname = dirname(fileURLToPath(import.meta.url)) // Para utilizar __dirname com o type module
 
-const config = {
-    root: 'public'
-}
+// Para utilizar __dirname com o type module
+const __dirname = dirname(fileURLToPath(import.meta.url)) 
 
 app.use(express.static('./public'))
 app.use(express.static('./public/img'))

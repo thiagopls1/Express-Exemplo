@@ -1,17 +1,20 @@
 {
   "name": "express-introduction",
-  "type": "module", 
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "live-reload": "nodemon index.js"
+    "live-reload": "nodemon index.js",
+    "test-db": "nodemon database.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
   }
 }
